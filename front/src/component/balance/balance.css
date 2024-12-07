@@ -1,0 +1,157 @@
+.flex {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .page {
+    width: 393px;
+    height: 852px;
+    border: 1px solid #000;
+    border-radius: 30px;
+  }
+
+  .page__img {
+   position: relative;
+  }
+
+  .page__img__bgbalance {
+    position: absolute;
+  }
+
+  .page__img__setting {
+    position: relative;
+    margin-top: 54px;
+  }
+
+  .main__center {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .main__center__text {
+    position: relative;
+    margin-top: 54px;
+    font-family: 'Jost';
+    font-weight: 300;
+    color: #F3F5FF;
+  }
+
+  .block__balance {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .main__balance__text {
+    font-size: 34px;
+    color: #FFFFFF;
+    font-family: 'Jost';
+    font-weight: 600;
+  }
+  .main__balance__img {
+    font-size: 34px;
+    color: #FFFFFF;
+    font-family: 'Jost';
+    font-weight: 600;
+  }
+
+  .main__center__circle {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 35px;
+    gap: 12px;
+  }
+
+  .circle__img {
+    border: 1px solid #5B94E9;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    position: absolute;
+    left: 8px;
+    top: 9px;
+    background-color: #5B94E9;
+  }
+  .circle__bg {
+    border: 1px solid #FFFFFF;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    position: relative;
+    background-color: #FFFFFF;
+  }
+
+  .circle__img__update {
+    margin-left: 9px;
+    margin-top: 10px;
+  }
+
+  .circle__bg__text {
+    margin-left: 9px;
+    margin-top: 75px;
+    font-family: 'Jost';
+    font-size: 14px;
+    font-weight: normal;
+    color: #1D1D1F;
+  }
+
+  .operations {
+    width: 353px;
+    height: 440px;
+    margin-left: 18px;
+    margin-top: 90px;
+  }
+
+  .item__operations {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    height: 48px;
+  }
+  .item__operations__info {
+    display: flex;
+  }
+  .timedate {
+    display: flex;
+    font-size: 12px;
+    color: #939199;
+    font-weight: 400;
+    gap: 4px;
+  }
+
+  .title__timedate {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 12px;
+    gap: 8px;
+
+  }
+
+  .title {
+    color: #1D1D1F;
+    font-size: 16px;
+    font-family: 'Jost';
+    font-weight: 500;
+  }
+
+  .money {
+   margin-top: 14px;
+   color:  #26BF80;
+   font-size: 16px;
+   font-family: 'Jost';
+   font-weight: 500;
+  }
+
+  .money__send {
+    color: black;
+    margin-top: 14px;
+   font-size: 16px;
+   font-family: 'Jost';
+   font-weight: 500;
+  }
+  

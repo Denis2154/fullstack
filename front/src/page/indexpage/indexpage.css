@@ -1,0 +1,95 @@
+.flex {
+    display: flex;
+    justify-content: center;
+  }
+  .page {
+    width: 393px;
+    height: 852px;
+    border: 1px solid #000;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+  
+  .page__text__image {
+    position: relative;
+  }
+  
+  .page__text {
+    position: absolute;
+    margin-left: 119px;
+    text-align: center;
+    margin-top: 120px;
+  }
+  
+  .page__text__info {
+    margin-bottom: 12px;
+    font-family: 'Jost';
+    font-size: 42px;
+    color: #FFFFFF;
+    font-weight: 600;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+  
+  .page__text__description {
+    font-family: 'Jost';
+    font-size: 20px;
+    color: #FFFFFF;
+    font-weight: 300;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+  
+  .background {
+    max-width: 393px;
+    max-height: 584px;
+    border-radius: 30px;
+  }
+  
+  .background__keysis {
+    position: absolute;
+    transform: rotate(5deg);
+    right: -320px;
+    top: -20px;
+  }
+  
+  .keysis__image {
+    background-clip: content-box;
+  }
+  
+  .page__button {
+    position: relative;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-left: 19px;
+  }
+  
+  .page__button__singup {
+    width: 353px;
+    height: 56px;
+    background-color: #775CE5;
+    border-radius: 12px;
+    color: #FFFFFF;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .page__button__singin {
+    width: 353px;
+    height: 56px;
+    border: 1px solid #775CE5;
+    border-radius: 12px;
+    color: #775CE5;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .page__button__singup:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  .page__button__singin:hover {
+    cursor: pointer;
+    font-weight: 800;
+  }

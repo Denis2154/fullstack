@@ -1,0 +1,107 @@
+.flex {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .page {
+    width: 393px;
+    height: 852px;
+    border: 1px solid #000;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+  
+  .icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 20px;
+    margin-top: 61px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .block__info {
+    display: flex;
+    flex-direction: column;
+    width: 353px;
+    height: 436px;
+    margin-left: 20px;
+    gap: 32px;
+  }
+  
+  .block__text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+  
+  .block__text__title {
+    font-family: 'Jost';
+    font-weight: 400;
+    font-size: 24px;
+    color: #121212;
+  }
+  
+  .block__text__description {
+    font-family: 'Jost';
+    color: #939199;
+    font-size: 14px;
+  }
+  
+  .block__email__password {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .input {
+    display: flex;
+    border: 1px solid #775CE5;
+    border-radius: 12px;
+    height: 54px;
+    padding: 16px 20px;
+    font-size: 14px;
+    color: #1D1D1F;
+    justify-content: space-between;
+  }
+  
+  .label {
+    font-size: 14px;
+    color: #1D1D1F;
+  }
+  
+  .block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .text {
+    font-size: 14px;
+    color: #1D1D1F;
+    font-weight: 500;
+  }
+  
+  .text__signin {
+    color: #775CE5;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .button {
+    display: flex;
+    flex-direction: column;
+    background-color: #775CE5;
+    width: 353px;
+    height: 56px;
+    border-radius: 12px;
+    padding-top: 16px;
+  }
+  
+  .button__color {
+    font-family: 'Jost';
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 600;
+  }

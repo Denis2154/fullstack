@@ -1,97 +1,27 @@
-const createError = require('http-errors')
-const express = require('express')
-const path = require('path')
-const cookieParser = require('cookie-parser')
-const logger = require('morgan')
-const dotenv = require('dotenv')
+const express = require('express');
+const dotenv = require('dotenv');
+const routes = require('./src/route/index');
+const cors = require('cors');
 
-// const webpack = require('webpack')
-// const webpackDevMiddleware = require('webpack-dev-middleware')
-// const webpackHotMiddleware = require('webpack-hot-middleware')
-// const config = require('./webpack.config.js')
+dotenv.config();
 
-// const hbs = require('express-handlebars')
+const app = express();
 
-// const compiler = webpack(config)
-const app = express()
+const corsOptions = {
+  origin: ['http://localhost:3000'],
+  methods: 'GET, HEAD, PUT, PATCH, POST, DELETE',
+  credentials: true,
+  allowedHeaders: ['Content-Type', 'Authorization'],
+};
 
-dotenv.config()
+app.use(cors(corsOptions));
 
-// app.use(
-//   webpackDevMiddleware(compiler, {
-//     publicPath: config.output.publicPath,
-//   }),
-// )
+app.use(express.json());
 
-// app.use(webpackHotMiddleware(compiler))
+app.get('/', (req, res) => {
+  res.send('Welcome to the API!');
+});
 
-// app.set('view engine', 'hbs')
-// app.set('views', 'src/container')
-// app.engine(
-//   'hbs',
-//   hbs.engine({
-//     extname: 'hbs',
-//     defaultLayout: 'default/index',
-//     layoutsDir: __dirname + '/src/layout/',
-//     partialsDir: {
-//       dir: __dirname + '/src/component/',
-//       rename: (filePath) => {
-//         return `${filePath.split('/')[0]}`
-//       },
-//     },
-//   }),
-// )
+app.use('/api', routes);
 
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*')
-  res.header(
-    'Access-Control-Allow-Methods',
-    'GET, POST, PUT, DELETE',
-  )
-  res.header(
-    'Access-Control-Allow-Headers',
-    'Content-Type, Authorization',
-  )
-  next()
-})
-
-app.use(logger('dev'))
-app.use(express.json())
-app.use(express.urlencoded({ extended: false }))
-app.use(cookieParser())
-app.use(express.static(path.join(__dirname, 'public')))
-
-if (process.env.NODE_ENV === 'development') {
-  const livereload = require('livereload')
-  const connectLiveReload = require('connect-livereload')
-
-  const liveReloadServer = livereload.createServer()
-  liveReloadServer.watch(path.join(__dirname, 'public'))
-  liveReloadServer.server.once('connection', () => {
-    setTimeout(() => {
-      liveReloadServer.refresh('/')
-    }, 100)
-  })
-  app.use(connectLiveReload())
-}
-
-const route = require('./src/route/index.js')
-
-app.use('/', route)
-// catch 404 and forward to error handler
-app.use((req, res, next) => {
-  next(createError(404))
-})
-
-// error handler
-app.use((err, req, res, next) => {
-  // set locals, only providing error in development
-  res.locals.message = err.message
-  res.locals.error =
-    req.app.get('env') === 'development' ? err : {}
-
-  // render the error page
-  res.status(err.status || 500).json(err)
-})
-
-module.exports = app
+module.exports = app;
